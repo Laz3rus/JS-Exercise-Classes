@@ -125,6 +125,9 @@ class Lambdasian {
     this.age = age;
     this.location = location;
   }
+  speak(){
+    return `Hello my name is ${this.name}, I am from ${this.location}`
+  }
 }
 
 /*
