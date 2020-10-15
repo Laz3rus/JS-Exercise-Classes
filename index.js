@@ -82,8 +82,30 @@ console.log(eddy.stomach);
 */
 
 class Car {
+  constructor(model, mpg) {
+    this.model = model;
+    this.mpg = mpg;
+    this.tank = 0;
+    this.odometer = 0;
+  }
 
+  fill(gallons){
+    this.tank = (this.tank + gallons);
+  }
+  drive(distance){
+    this.odometer = (this.odometer + distance);
+    this.tank = (this.tank - (distance / this.mpg));
+    if(this.tank === 0){
+      return `I ran out of fuel at ${this.odometer} miles!`
+    }
+  }
 }
+let Ford1 = new Car('challenger', 38);
+
+Ford1.fill(30);
+console.log(Ford1);
+Ford1.drive(200);
+console.log(Ford1)
 
 /*
   TASK 3
