@@ -120,7 +120,11 @@ console.log(Ford1)
         + {name} and {location} of course come from the instance's own properties.
 */
 class Lambdasian {
-
+  constructor(name, age, location){
+    this.name = name;
+    this.age = age;
+    this.location = location;
+  }
 }
 
 /*
